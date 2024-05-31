@@ -1,0 +1,56 @@
+.card {
+  padding: 20px;
+  width: 90%;
+  min-height: 240px;
+  background-image: url("../../../public/background.jpg");
+  background-size: cover;
+  background-color: #6391c2;
+  color: #ffffff;
+  border-radius: 12px;
+  position: absolute;
+  top: -210px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  &__header, &__content, &__footer {
+    margin: 0;
+  }
+
+  &__header {
+    text-align: right;
+  }
+
+  &__context {
+    margin: 20px 0;
+    font-family: Inconsolata;
+    font-size: 36px;
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &--title {
+      margin: 0;
+      text-transform: uppercase;
+      font-size: 12px;
+      color: rgba(#ffffff, 0.5);
+    }
+  }
+
+  &__row {
+    margin: 0;
+    font-family: Inconsolata;
+    font-size: 20px;
+  }
+
+  &__right {
+    text-align: right;
+  }
+}
+
+.logo {
+  width: 75px;
+}
