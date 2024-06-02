@@ -1,4 +1,3 @@
-
 import './Input.scss'
 import { forwardRef } from "react";
 
@@ -17,6 +16,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(({ onChange, value
       ref={ref}
       onChange={onChange}
       value={value}
+      maxLength={number ? 4 : undefined}
     />
   )
 })
