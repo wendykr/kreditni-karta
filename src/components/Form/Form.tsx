@@ -1,11 +1,16 @@
-import { useEffect, useRef, useState } from 'react';
+import { useContext, useEffect, useRef } from 'react';
 import './Form.scss';
+import { SettingsContext } from '../../context/SettingsContext';
 
 export const Form = () => {
-  const [first, setFirst] = useState<string>('');
-  const [second, setSecond] = useState<string>('');
-  const [third, setThird] = useState<string>('');
-  const [fourth, setFourth] = useState<string>('');
+
+  const {
+    first, handleChangeFirst,
+    second, handleChangeSecond,
+    third, handleChangeThird,
+    fourth, handleChangeFourth,
+    username, handleChangeUsername
+  } = useContext(SettingsContext);
 
   const inputFirstRef = useRef<HTMLInputElement>(null);
   const inputSecondRef = useRef<HTMLInputElement>(null);
@@ -21,22 +26,6 @@ export const Form = () => {
     (fourth.length === 4) && inputHolderRef.current?.focus();
   }, [first, second, third, fourth])
 
-  const handleChangeFirst = (event: React.ChangeEvent<HTMLInputElement>) => {
-    (/[0-9]/.test(event.target.value.trim())) && setFirst(event.target.value);
-  }
-
-  const handleChangeSecond = (event: React.ChangeEvent<HTMLInputElement>) => {
-    (/[0-9]/.test(event.target.value.trim())) && setSecond(event.target.value);
-  }
-
-  const handleChangeThird = (event: React.ChangeEvent<HTMLInputElement>) => {
-    (/[0-9]/.test(event.target.value.trim())) && setThird(event.target.value);
-  }
-
-  const handleChangeFourth = (event: React.ChangeEvent<HTMLInputElement>) => {
-    (/[0-9]/.test(event.target.value.trim())) && setFourth(event.target.value);
-  }
-
   return (
     <div className="form">
       <p className="form__label">Card number</p>
@@ -47,7 +36,7 @@ export const Form = () => {
         <input className="input" type="text" onChange={handleChangeFourth} value={fourth} ref={inputFourthRef} />
       </div>
       <p className="form__label">Card holder</p>
-      <input className="input holder" type="text" ref={inputHolderRef} />
+      <input className="input holder" type="text" ref={inputHolderRef} onChange={handleChangeUsername} value={username} />
       <button className="button">Submit</button>
     </div>
   )

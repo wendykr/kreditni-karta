@@ -25,7 +25,8 @@
   outline: none;
 
   &:focus {
-    border: 1px solid #777;
+    border: 1px solid #004da6;
+    box-shadow: #0070d2 0 0 2px;
   }
 
   &__container {

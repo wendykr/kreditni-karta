@@ -8,7 +8,7 @@
   color: #ffffff;
   border-radius: 12px;
   position: absolute;
-  top: -210px;
+  top: -200px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -18,13 +18,33 @@
   }
 
   &__header {
-    text-align: right;
+    display: flex;
+    flex-direction: column;
+
+    &--right, &--left {
+      margin: 0;
+    }
+
+    &--right {
+      text-align: right;
+    }
+
+    &--left {
+      margin-left: 18px;
+      margin-bottom: -20px;
+      text-align: left;
+    }
   }
 
   &__context {
-    margin: 20px 0;
+    margin: 0 16px;
+    height: 54px;
     font-family: Inconsolata;
     font-size: 36px;
+    letter-spacing: 2px;
+    display: flex;
+    flex-direction: row;
+    gap: 18px;
   }
 
   &__footer {
@@ -42,8 +62,9 @@
 
   &__row {
     margin: 0;
+    height: 27px;
     font-family: Inconsolata;
-    font-size: 20px;
+    font-size: 18px;
   }
 
   &__right {
@@ -53,4 +74,12 @@
 
 .logo {
   width: 75px;
+}
+
+.chip {
+  width: 36px;
+}
+
+.username {
+  text-transform: uppercase;
 }
