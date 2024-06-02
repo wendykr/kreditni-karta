@@ -1,10 +1,10 @@
 .card {
   padding: 20px;
-  width: 90%;
+  width: 88%;
   min-height: 240px;
-  background-image: url("../../../public/background.jpg");
+  background-image: url("/background.jpg");
   background-size: cover;
-  background-color: #6391c2;
+  background-color: #003878;
   color: #ffffff;
   border-radius: 12px;
   position: absolute;
@@ -26,7 +26,11 @@
     }
 
     &--right {
-      text-align: right;
+      height: 24px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      gap: 4px;
     }
 
     &--left {
@@ -73,7 +77,8 @@
 }
 
 .logo {
-  width: 75px;
+  height: 25px;
+  // width: 75px;
 }
 
 .chip {

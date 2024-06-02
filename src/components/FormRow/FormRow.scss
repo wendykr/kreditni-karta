@@ -1,0 +1,18 @@
+.formRow {
+
+  &__label--title {
+    margin: 14px 0 8px 0;
+    color: #444444;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: block;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 20px;
+  }
+}

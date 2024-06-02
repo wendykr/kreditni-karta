@@ -1,8 +1,8 @@
 import './Card.scss'
-import logoVisa from '../../../public/logo-visa.svg';
-import emvChip from '../../../public/emv-chip.svg';
+import emvChip from '/emv-chip.svg';
 import { useContext } from 'react';
 import { SettingsContext } from '../../context/SettingsContext';
+import { getCardLogo } from '../../helpers/getCardLogo';
 
 export const Card = () => {
 
@@ -10,10 +10,14 @@ export const Card = () => {
 
   return (
     <div className="card">
-      <p className="card__header">
-        <p className="card__header--right"><img className="logo" src={logoVisa} /></p>
+      <div className="card__header">
+        <p className="card__header--right">
+          {
+            getCardLogo(first)
+          }
+        </p>
         <p className="card__header--left"><img className="chip" src={emvChip} /></p>
-      </p>
+      </div>
       <p className="card__context">
         <span>{first}</span>
         <span>{second}</span>
