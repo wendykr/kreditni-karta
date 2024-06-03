@@ -17,5 +17,16 @@
 
 .number {
   text-align: center;
-  letter-spacing: 10px;
+
+  @media (min-width: 400px) {
+    letter-spacing: 2px;
+  }
+
+  @media (min-width: 450px) {
+    letter-spacing: 6px;
+  }
+
+  @media (min-width: 550px) {
+    letter-spacing: 10px;
+  }
 }

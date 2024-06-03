@@ -42,13 +42,43 @@
 
   &__context {
     margin: 0 16px;
-    height: 54px;
+    height: 24px;
     font-family: Inconsolata;
-    font-size: 36px;
+    font-size: 20px;
     letter-spacing: 2px;
     display: flex;
     flex-direction: row;
-    gap: 18px;
+    gap: 10px;
+
+    @media (min-width: 350px) {
+      height: 30px;
+      font-size: 22px;
+      gap: 12px
+    }
+
+    @media (min-width: 400px) {
+      height: 36px;
+      font-size: 27px;
+      gap: 13px;
+    }
+
+    @media (min-width: 450px) {
+      height: 42px;
+      font-size: 30px;
+      gap: 14px;
+    }
+
+    @media (min-width: 500px) {
+      height: 48px;
+      font-size: 32px;
+      gap: 16px;
+    }
+
+    @media (min-width: 550px) {
+      height: 54px;
+      font-size: 36px;
+      gap: 18px;
+    }
   }
 
   &__footer {
