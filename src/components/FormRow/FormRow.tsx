@@ -2,6 +2,7 @@ import { useContext, useEffect, useRef } from 'react';
 import './FormRow.scss'
 import { SettingsContext } from '../../context/SettingsContext';
 import { Input } from '../Input/Input';
+import { getCardLogo } from '../../helpers/getCardLogo';
 
 interface FormRowProps {
   title: string;
@@ -39,11 +40,19 @@ export const FormRow = ({ title }: FormRowProps) => {
   return (
     <div className="formRow">
       <label className="formRow__label">
-        <span className="formRow__label--title">
+        <div className="formRow__label--container">
+          <span className="formRow__label--title">
           {
             title === 'Card number' ? 'Card number' : 'Card holder'
           }
-        </span>
+          </span>
+          {
+            (title === 'Card number' &&
+              getCardLogo(first) === null &&
+              (first.length > 0 || second.length > 0 || third.length > 0 || fourth.length > 0)) &&
+                <span className="formRow__label--error">... is invalid!</span>
+          }
+        </div>
         <div className="formRow__container">
           {
             title === 'Card number' ?
