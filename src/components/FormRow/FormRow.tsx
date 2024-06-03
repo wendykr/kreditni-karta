@@ -50,7 +50,7 @@ export const FormRow = ({ title }: FormRowProps) => {
             (title === 'Card number' &&
               getCardLogo(first) === null &&
               (first.length > 0 || second.length > 0 || third.length > 0 || fourth.length > 0)) &&
-                <span className="formRow__label--error">... is invalid!</span>
+                <span className="formRow__label--error">... starting sequence is invalid!</span>
           }
         </div>
         <div className="formRow__container">

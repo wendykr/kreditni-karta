@@ -16,7 +16,7 @@ Naprogramovala jsem formulář, ze kterého se data současně zobrazují na kar
 
 Do každého input pole lze zadat pouze 4 číslice, což je ošetřeno validací. Po vyplnění se kurzor automaticky přesune do dalšího inputu.
 
-Při vyplňování čísla karty se uživateli zobrazuje, zda zadané číslo odpovídá pravidlům vydavatelů karet.
+Při vyplňování čísla karty se uživateli zobrazuje, zda začínající číslo odpovídá pravidlům vydavatelů karet.
 
 Každý vydavatel má jasná pravidla, jak podle čísla karty poznat její typ:
 
@@ -27,7 +27,7 @@ Každý vydavatel má jasná pravidla, jak podle čísla karty poznat její typ:
 - **Diners Club**: začíná čísly 36 nebo 55.
 
 Jsou-li splněna pravidla, zobrazí se v levém horním rohu karty logo příslušného vydavatele.
-V opačném případě se vedle labelu "*CARD NUMBER*" zobrazí informace o neplatném čísle karty - "*... is invalid*".
+V opačném případě se vedle labelu "*CARD NUMBER*" zobrazí informace o neplatném čísle karty - "*... starting sequence is invalid!*".
 
 Je-li číslo karty kompletní a správné, zobrazí se fiktivní datum platnosti karty. Reálná data nelze použít z důvodu ochrany soukromí.
 

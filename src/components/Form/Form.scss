@@ -1,6 +1,10 @@
 .form {
-  padding: 40px 30px;
+  padding: 40px 20px;
   border-radius: 20px;
   background-color: #ffffff;
   box-shadow: 2px 2px 7px #ccc;
+
+  @media (min-width: 370px) {
+    padding: 40px 30px;
+  }
 }
