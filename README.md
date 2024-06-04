@@ -1,6 +1,6 @@
 # Kreditní karta
 
-Vizuální ověření správného formátu čísla kreditní karty.
+Vizuální ověření správného formátu začínajícího čísla kreditní karty.
 
 - [Zadání](#zadání)
 - [Abstrakt](#abstrakt)
