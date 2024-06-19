@@ -13,7 +13,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
       <input
         className={`input ${number ? "number" : ""}`}
         type="text"
-        inputMode="numeric"
+        inputMode={`${number ? "numeric" : "text"}`}
         ref={ref}
         onChange={onChange}
         value={value}
